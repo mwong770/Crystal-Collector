@@ -1,0 +1,115 @@
+
+body {
+	background: url("../images/cave.jpg") no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+/*does not work without webkit prefix*/
+h1 {
+	background: url("../images/multicolorText.jpg") repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-size: 110px;
+	text-align: center;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+h2 {
+	background: url("../images/yellowText.png") repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-size: 110px;
+	text-align: center;
+	font-size: 35px;
+}
+
+h3 {
+	background: url("../images/redText.png") repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-size: 110px;
+	text-align: center;
+	font-size: 35px;
+}
+
+p{
+	background: url("../images/yellowText.png") repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+span {
+	background: url("../images/yellowText.png") repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.label {
+	background: url("../images/redText.png") repeat, white;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-size: 30px;
+}
+
+.container {
+	width: 100%;
+}
+
+#mid1 {
+	margin-top: -20px;
+}
+
+#mid2, #mid3, #scoreboard {
+	text-align: center;
+}
+
+#instructions, #list {
+	font-size: 18px;	
+}
+
+#instructionSlide {
+	display: hidden;
+}
+
+#goalValueBox {
+	height: 200px;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+#currentValueBox {
+	height: 200px;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+#scoreboard {
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 5px;
+	overflow: auto;
+}
+
+#redCrystal {
+   margin-top: 30px;
+   margin-left: 20px;
+}
+
+#diamond {
+	margin-top: 30px;
+}
+
+#blueCrystal {
+	margin-top: -30px;
+}
+
+#greenCrystal {
+	margin-top: -30px;
+}
+
+
+
