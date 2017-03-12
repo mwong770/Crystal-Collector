@@ -12,7 +12,7 @@ h1 {
 	-webkit-background-clip: text;
 	font-size: 110px;
 	text-align: center;
-	padding-top: 0;
+	padding-top: 20px;
 	margin-top: 0;
 }
 
@@ -31,13 +31,8 @@ h3 {
 	-webkit-background-clip: text;
 	font-size: 110px;
 	text-align: center;
-	font-size: 35px;
-}
-
-p{
-	background: url("../images/yellowText.png") repeat, white;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
+	font-size: 27px;
+	margin: 20px auto;
 }
 
 span {
@@ -57,27 +52,43 @@ span {
 	width: 100%;
 }
 
-#mid1 {
-	margin-top: -20px;
-}
-
-#mid2, #mid3, #scoreboard {
+#gameDivs1, #gameDivs2, #gameDivs3 {
 	text-align: center;
 }
 
-#instructions, #list {
-	font-size: 18px;	
+#instructions {
+	font-size: 18px;
+	margin-top: -10px;
 }
 
-#instructionSlide {
-	display: hidden;
+/*position absolute to not push crystals down on slideToggle down*/
+/*z-index to be in front of crystals during slideToggle down*/
+#instructionsSlide {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	background: url("../images/scroll.png") no-repeat;
+	background-width: 100%;
+	background-height: auto;
+	background-color: transparent;
+	width: 50%;
+	text-align: center;
+	margin-left: 25% ;
+	margin-top: -23px;
+	height: 420px;
+	padding: 60px;
+	background-size: cover;
+}
+
+#instructionsClicker {
+    margin: 0 auto;
 }
 
 #goalValueBox {
 	height: 200px;
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 50px;
+	margin-top: 35px;
 }
 
 #currentValueBox {
@@ -90,25 +101,34 @@ span {
 #scoreboard {
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 5px;
+	margin-top: 35px;
 	overflow: auto;
 }
 
+#bottomRow, #bottomContainer {
+	margin: 0;
+	padding: 0;
+}
+
+.crystals {
+	box-shadow: 0 0 40px #fff;
+}
+
 #redCrystal {
-   margin-top: 30px;
+   margin-top: 110px;
    margin-left: 20px;
 }
 
 #diamond {
-	margin-top: 30px;
+	margin-top: 130px;
 }
 
 #blueCrystal {
-	margin-top: -30px;
+	margin-top: 50px;
 }
 
 #greenCrystal {
-	margin-top: -30px;
+	margin-top: 70px;
 }
 
 

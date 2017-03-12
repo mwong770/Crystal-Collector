@@ -16,89 +16,94 @@
 </head>
 <body>
 
-<div id ="topContainer" class="container">
-<div id="topRow" class="row">
-<div id="top" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div id ="topContainer" class="container">
+		<div id="topRow" class="row">
 
-	<h1> Crystal Collector </h1>
+			<div id="top" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-	<h2> Can you collect enough crystals to earn a day's wages <br/> or will you lose your gold coins?</h2>
+				<h1> Crystal Collector </h1>
 
-</div></div></div>
+				<h2> Can you collect enough crystals to earn a day's wages <br/> 
+					 or will you lose your gold coins?</h2>
 
-<div id ="midContainer" class="container">
-<div id="midRow" class="row">
-
-<div id="mid1" class="col-xs-3 col-sm-3 col-md-3 col-lg-4">
-	<div id="instructions"> 
+			</div>
 		
-		<h3 id="instructionClicker">Instructions</h3>
-		<div id="instructionSlide">
-			<p>You will be given a random number at the start of the game.</p>
-			<p>By clicking on a crystal you will add a specific amount of points to your total score.</p>
-			<p>You win the game matching your total score to random number. You lose the game if your total score goes above the randon number.</p>
-			<p>The value of each crystal is hidden from you until you click on it.</p> 
-			<p>Each time when the game starts, the game will change the value of each crystal.</p>
 		</div>
+	</div>
+
+	<div id ="instrunctionsContainer" class="container">
+		<div id="instructionsRow" class="row">
+
+			<div id="instructions" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		
+				<div id="instructionsClicker"> <h3>Click for Instructions</h3> </div>
+				<div id="instructionsSlide">
+					<p>You will be given a random number at the start of the game.</p>
+					<p>By clicking on a crystal you will add a specific amount of points to your total score.</p>
+					<p>You win the game matching your total score to random number. You lose the game if your total score goes above the randon number.</p>
+					<p>The value of each crystal is hidden from you until you click on it.</p> 
+					<p>Each time when the game starts, the game will change the value of each crystal.</p>
+				</div>
+
+			</div>
+
+		</div>
 	</div>
-</div>
 
-<div id="mid2" class="col-xs-3 col-sm-3 col-md-3 col-lg-offset-1 col-lg-2">
-	<div id="goalValueBox"> <div class="label"> Goal Value </div><br/> <span id="goalValue"></span> </div>
-</div>
+	<div id="gameContainer" class="container">
+		<div id="gameRow" class="row">
 
-<div id="mid3" class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
-	<div id="currentValueBox"> <div class="label"> Current Value: </div><br/><span id="currentValue"> 0 </span> </div>
-</div>
+			<div id="gameDivs1" class="col-xs-3 col-sm-3 col-md-3 col-lg-offset-2 col-lg-3">
 
-<div id="mid4" class="col-xs-3 col-sm-3 col-md-3  col-lg-3">
-	<div id="scoreboard">
-		<div class="label">Crystal Miner </div><br/><br/> 
-		<div class="label">Wins </div><br/> 
-		<span id="wins"> 0 </span><br/>
-		<div class="label">Losses</div><br/>
-		<span id="losses"> 0 </span> 
-	</div>
-</div>
+				<div id="goalValueBox"> <div class="label"> Goal Value </div><br/> 
+				 	<span id="goalValue"></span> <br/><br/>
+				 	<div class="label"> Current Value: </div><br/>
+					<span id="currentValue"> 0 </span> 
+				</div>
 
-</div></div>
+			</div>
 
-<div id ="bottomContainer" class="container">
-<div id="bottomRow" class="row">
+			<div id="gameDivs3" class="col-xs-3 col-sm-3 col-md-3 col-lg-offset-2 col-lg-3">
+
+				<div id="scoreboard">
+					<div class="label">Wins </div><br/> 
+					<span id="wins"> 0 </span><br/><br>
+					<div class="label">Losses</div><br/>
+					<span id="losses"> 0 </span> 
+				</div>
+
+			</div>
+
+		</div>
+	</div> 
+
+	<div id ="bottomContainer" class="container">
+		<div id="bottomRow" class="row">
 	
-	<div id="bottom1" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-2">
-		<img id="redCrystal" class="crystal" src="assets/images/redCrystal.png">
-	</div>
+			<div id="bottom1" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-2">
+				<img id="redCrystal" class="crystal" src="assets/images/redCrystal.png">
+			</div>
 
-	<div id="bottom2" class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
-		<img id="blueCrystal" class="crystal" src="assets/images/blueCrystal.png">
-	</div>
+			<div id="bottom2" class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+				<img id="blueCrystal" class="crystal" src="assets/images/blueCrystal.png">
+			</div>
 
-	<div id="bottom3" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-2">
-		<img id="diamond" class="crystal" src="assets/images/diamond.png">
-	</div>
+			<div id="bottom3" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-2">
+				<img id="diamond" class="crystal" src="assets/images/diamond.png">
+			</div>
 
-	<div id="bottom4" class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
-		<img id="greenCrystal" class="crystal" src="assets/images/greenCrystal.png">
-	</div>
+			<div id="bottom4" class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+				<img id="greenCrystal" class="crystal" src="assets/images/greenCrystal.png">
+			</div>
 
-</div></div>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-	<script>
-
-
-
-$( "#instructionClicker" ).click(function() {
-  $( "#instructionSlide" ).slideDown( "slow", function() {
-    // Animation complete.
-  });
-});
-
-</script>
 </body>
+
 </html>
+
 

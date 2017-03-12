@@ -63,6 +63,14 @@ $(document).ready( function() {
 			console.log("diamond+= " + currentValue);
 			comparison();
 		});
+
+	// $("#instructionClicker").click(function() {
+ //  			$("#instructionSlide").slideDown("slow");
+ //  	});
+
+  	$("#instructionsClicker").click(function() {
+  			$("#instructionsSlide").slideToggle("slow");
+  	});
  
 	//inclusive random number between 1 and 12
 	function randomCrystalValue() {
