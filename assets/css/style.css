@@ -1,17 +1,13 @@
 
-/** {*/
-/*	box-sizing: border-box;
-}*/
-
 body {
 	background: url("../images/cave.jpg") no-repeat fixed;
 	background-size: cover;
 	position: relative;
+	font-family: 'IM Fell English SC', serif;
 }
 
-/*does not work without webkit prefix*/
 h1 {
-	background: url("../images/multicolorText.jpg") repeat, white;
+	background: url("../images/purpleText.png") repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	font-size: 100px;
@@ -21,7 +17,7 @@ h1 {
 }
 
 h2 {
-	background: url("../images/yellowText.png") repeat, white;
+	background: url("../images/greenBlueText.png") repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	text-align: center;
@@ -29,7 +25,7 @@ h2 {
 }
 
 h3 {
-	background: url("../images/redText.png") repeat, white;
+	background: url("../images/yellowText.png") repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 	text-align: center;
@@ -88,12 +84,6 @@ span {
 	box-sizing: border-box;
 }
 
-/*
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-*/
-
 #instructionsClicker {
     margin: 0 auto;
 }
@@ -101,7 +91,6 @@ span {
 #goalValueBox {
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 30px;
 }
 
 #currentValueBox {
@@ -113,8 +102,11 @@ span {
 #scoreboard {
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 30px;
 	overflow: auto;
+}
+
+#gameRow {
+	bottom-margin: 500px;
 }
 
 #bottomRow, #bottomContainer {
@@ -160,12 +152,16 @@ img:hover {
 	filter: drop-shadow(0px 0px 20px green);
 }
 
+footer {
+	color: white;
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+}
+
 /************ MEDIA 1350 MEDIA 1350 MEDIA 1350 MEDIA 1350 MEDIA 1350 *******************************/
 
 @media screen and (max-width: 1350px) {
-	p {
-		color: blue;
-	}
 
 	h1 {
 		font-size: 95px;
@@ -238,9 +234,6 @@ img:hover {
 /************ MEDIA 1200 MEDIA 1200 MEDIA 1200 MEDIA 1200 MEDIA 1200 *******************************/
 
 @media screen and (max-width: 1200px) {
-	p {
-		color: purple;
-	}
 
 	h1 {
 		font-size: 90px;
@@ -316,10 +309,6 @@ img:hover {
 
 @media screen and (max-width: 980px) {
 
-	p {
-		color: red;
-	}
-
 	h1 {
 		font-size: 84px;
 		margin-top: 10px;
@@ -392,10 +381,6 @@ img:hover {
 /************ MEDIA 768 MEDIA 768 MEDIA 768 MEDIA 768 MEDIA 768 *******************************/
 
 @media screen and (max-width: 768px) {
-
-	p {
-		color: black;
-	}
 
 	h1 {
 		font-size: 70px;
@@ -470,10 +455,6 @@ img:hover {
 
 @media screen and (max-width: 640px) {
 
-	p {
-		color: red;
-	}
-
 	h1 {
 		font-size: 65px;
 		margin-top: 10px;
@@ -547,10 +528,6 @@ img:hover {
 /************ MEDIA 520 MEDIA 520 MEDIA 520 MEDIA 520 MEDIA 520 *******************************/
 
 @media screen and (max-width: 520px) {
-
-	p {
-		color: purple;
-	}
 
 	h1 {
 		font-size: 50px;

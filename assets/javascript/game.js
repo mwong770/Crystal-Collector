@@ -9,6 +9,8 @@ $(document).ready( function() {
 	var greenCrystal = '';
 	var wins = 0;
 	var losses = 0;
+	var scoreSound = document.getElementById("scoreSound");
+	var clickSound = document.getElementById("clickSound");
 
 	reset();
 
@@ -18,10 +20,10 @@ $(document).ready( function() {
 		reset();
 	}
 
+	//goalValue a random number from 19 to 120, both inclusive
 	function reset() {
 		currentValue = 0;
 		$("#currentValue").text(currentValue);
-		//makes goalValue a random number from 19 to 120, both inclusive
 		goalValue = Math.floor(Math.random() * ((120 - 19) +1) + 19);
 		$("#goalValue").html(goalValue);
 		console.log("goal " + goalValue);
@@ -35,63 +37,68 @@ $(document).ready( function() {
 		console.log("diamond " + diamond);
 	}
 
-	//make into a single function
-		$("#redCrystal").on('click', function() {
-			currentValue += redCrystal;
-			$("#currentValue").html(currentValue);
-			console.log("red+= " + currentValue);
-			comparison();
-		});
-
-		$("#greenCrystal").on('click', function() {
-			currentValue += greenCrystal;
-			$("#currentValue").text(currentValue);
-			console.log("green+= " + currentValue);
-			comparison();	
-		});
-
-		$("#blueCrystal").on('click', function() {
-			currentValue += blueCrystal;
-			$("#currentValue").text(currentValue);
-			console.log("blue+= " + currentValue);
-			comparison();	
-		});
-
-		$("#diamond").on('click', function() {
-			currentValue += diamond;
-			$("#currentValue").text(currentValue);
-			console.log("diamond+= " + currentValue);
-			comparison();
-		});
-
-	// $("#instructionClicker").click(function() {
- //  			$("#instructionSlide").slideDown("slow");
- //  	});
-
-  	$("#instructionsClicker").click(function() {
-  			$("#instructionsSlide").slideToggle("slow");
-  	});
- 
 	//inclusive random number between 1 and 12
 	function randomCrystalValue() {
 		return Math.floor((Math.random() * 12) + 1);
 	}
+
+
 
 	function comparison() {
 		
 		if (currentValue == goalValue) {
 			wins++;
 			console.log("wins " + wins);
-			$("#wins").html(wins);
+			$("#wins").text(wins);
+    		scoreSound.loop = false;
+        	scoreSound.play();
 			reset();
 		}
 
 			else if (currentValue > goalValue) {
 				losses++;
 				console.log("losses " + losses);
-				$("#losses").html(losses);
+				$("#losses").text(losses);
+				scoreSound.loop = false;
+        		scoreSound.play();
 				reset();
 			}
 	}
 
+	$("#redCrystal").on('click', function() {
+		currentValue += redCrystal;
+		$("#currentValue").text(currentValue);
+		clickSound.loop = false;
+        clickSound.play();
+		comparison();
+	});
+
+	$("#greenCrystal").on('click', function() {
+		currentValue += greenCrystal;
+		$("#currentValue").text(currentValue);
+		clickSound.loop = false;
+        clickSound.play();
+		comparison();	
+	});
+
+	$("#blueCrystal").on('click', function() {
+		currentValue += blueCrystal;
+		$("#currentValue").text(currentValue);
+		clickSound.loop = false;
+        clickSound.play();
+		comparison();	
+	});
+
+	$("#diamond").on('click', function() {
+		currentValue += diamond;
+		$("#currentValue").text(currentValue);
+		clickSound.loop = false;
+        clickSound.play();
+		comparison();
+	});
+
+  	$("#instructionsClicker").click(function() {
+  			$("#instructionsSlide").slideToggle("slow");
+  	});
+ 
 });
