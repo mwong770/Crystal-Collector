@@ -1,4 +1,8 @@
 
+/** {*/
+/*	box-sizing: border-box;
+}*/
+
 body {
 	background: url("../images/cave.jpg") no-repeat fixed;
 	background-size: cover;
@@ -10,7 +14,7 @@ h1 {
 	background: url("../images/multicolorText.jpg") repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	font-size: 110px;
+	font-size: 100px;
 	text-align: center;
 	padding-top: 20px;
 	margin-top: 0;
@@ -20,9 +24,8 @@ h2 {
 	background: url("../images/yellowText.png") repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	font-size: 110px;
 	text-align: center;
-	font-size: 35px;
+	font-size: 32px;
 }
 
 h3 {
@@ -63,22 +66,34 @@ span {
 
 /*position absolute to not push crystals down on slideToggle down*/
 /*z-index to be in front of crystals during slideToggle down*/
+/*bottom padding to see the bottom of the scroll at various browser sizes*/
+/*background-size contain to not cut off left side of picture while reducing browser size*/
+/*background-position center top so that the scroll appears to come out of word 'instructions'*/
 #instructionsSlide {
 	display: none;
 	position: absolute;
 	z-index: 1000;
 	background: url("../images/scroll.png") no-repeat;
-	background-width: 100%;
-	background-height: auto;
+	background-size: contain;
+	background-position: center top;
 	background-color: transparent;
-	width: 50%;
+	width: 56%;
 	text-align: center;
-	margin-left: 25% ;
-	margin-top: -23px;
-	height: 420px;
-	padding: 60px;
-	background-size: cover;
+	margin-left: 21% ;
+	margin-top: -18px;
+	padding-top: 40px;
+	padding-bottom: 30%;
+	padding-right: 8%;
+	padding-left: 8%;
+	color: black;
+	box-sizing: border-box;
 }
+
+/*
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+*/
 
 #instructionsClicker {
     margin: 0 auto;
@@ -147,4 +162,122 @@ img:hover {
 	filter: drop-shadow(0px 0px 20px green);
 }
 
+/************ MEDIA 1350 MEDIA 1350 MEDIA 1350 MEDIA 1350 MEDIA 1350 *******************************/
 
+@media screen and (max-width: 1350px) {
+	p {
+		color: blue;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	#instructionsSlide {
+		background: url("../images/scroll1350.png") no-repeat;
+		background-size: contain;
+		padding-bottom: 40%;
+		width: 56%;
+	}
+
+}
+
+/************ MEDIA 1200 MEDIA 1200 MEDIA 1200 MEDIA 1200 MEDIA 1200 *******************************/
+
+@media screen and (max-width: 1200px) {
+	p {
+		color: purple;
+	}
+
+	#instructionsSlide {
+		background: url("../images/scroll1200.png") no-repeat;
+		background-size: contain;
+		padding-bottom: 40%;
+		padding-top: 20px;
+		margin-left: 16%;
+		width: 66%;
+	}
+
+}
+
+/************ MEDIA 980 MEDIA 980 MEDIA 980 MEDIA 980 MEDIA 980 *******************************/
+
+
+@media screen and (max-width: 980px) {
+
+	p {
+		color: red;
+	}
+
+	#instructionsSlide {
+		background: url("../images/scroll980.png") no-repeat;
+		background-size: contain;
+		padding-bottom: 40%;
+		padding-top: 20px;
+		margin-left: 12%;
+		width: 76%;
+	}
+
+}
+
+/************ MEDIA 768 MEDIA 768 MEDIA 768 MEDIA 768 MEDIA 768 *******************************/
+
+@media screen and (max-width: 768px) {
+
+	p {
+		color: black;
+	}
+
+	#instructionsSlide {
+		background: url("../images/scroll768.png") no-repeat;
+		background-size: contain;
+		padding-bottom: 40%;
+		padding-top: 20px;
+		margin-left: 3%;
+		width: 90%;
+	}
+
+}
+
+/************ MEDIA 640 MEDIA 640 MEDIA 640 MEDIA 640 MEDIA 640 *******************************/
+
+@media screen and (max-width: 640px) {
+
+	p {
+		color: red;
+	}
+
+
+
+	#instructionsSlide {
+		background: url("../images/scroll640.png") no-repeat;
+		background-size: contain;
+		background-position: center top;
+		padding-bottom: 40%;
+		padding-top: 20px;
+		margin-left: 3%;
+		width: 90%;
+	}
+
+}
+
+/************ MEDIA 704 MEDIA 520 MEDIA 520 MEDIA 520 MEDIA 520 *******************************/
+
+@media screen and (max-width: 520px) {
+
+	p {
+		color: purple;
+	}
+
+	#instructionsSlide {
+		background: url("../images/scroll520.png") no-repeat;
+		background-size: contain;
+		background-position: center top;
+		padding-bottom: 40%;
+		padding-top: 20px;
+		margin-left: 3%;
+		width: 90%;
+	}
+
+
+}
