@@ -26,15 +26,10 @@ $(document).ready( function() {
 		$("#currentValue").text(currentValue);
 		goalValue = Math.floor(Math.random() * ((120 - 19) +1) + 19);
 		$("#goalValue").html(goalValue);
-		console.log("goal " + goalValue);
 		redCrystal = randomCrystalValue();
-		console.log("red " + redCrystal);
 		greenCrystal = randomCrystalValue();
-		console.log("green " + greenCrystal);
 		blueCrystal = randomCrystalValue();
-		console.log("blue " + blueCrystal);
 		diamond = randomCrystalValue();
-		console.log("diamond " + diamond);
 	}
 
 	//inclusive random number between 1 and 12
@@ -42,13 +37,10 @@ $(document).ready( function() {
 		return Math.floor((Math.random() * 12) + 1);
 	}
 
-
-
 	function comparison() {
 		
 		if (currentValue == goalValue) {
 			wins++;
-			console.log("wins " + wins);
 			$("#wins").text(wins);
     		scoreSound.loop = false;
         	scoreSound.play();
@@ -57,7 +49,6 @@ $(document).ready( function() {
 
 			else if (currentValue > goalValue) {
 				losses++;
-				console.log("losses " + losses);
 				$("#losses").text(losses);
 				scoreSound.loop = false;
         		scoreSound.play();
