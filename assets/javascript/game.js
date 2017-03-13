@@ -33,6 +33,12 @@ $(document).ready( function() {
 		return Math.floor((Math.random() * 12) + 1);
 	}
 
+	//plays sound to be used when crystal clicked or score implemented
+	function sound(soundFile) {
+		soundFile.loop = false;
+        soundFile.play();
+	}
+
 	//compares currentValue to goalValue to determine wins/losses
 	//increments and displays score and inserts sound per win/loss
 	//resets game after each win/loss
@@ -40,16 +46,14 @@ $(document).ready( function() {
 		if (currentValue == goalValue) {
 			wins++;
 			$("#wins").text(wins);
-    		scoreSound.loop = false;
-        	scoreSound.play();
+        	sound(scoreSound);
 			reset();
 		}
 
 			else if (currentValue > goalValue) {
 				losses++;
 				$("#losses").text(losses);
-				scoreSound.loop = false;
-        		scoreSound.play();
+				sound(scoreSound);
 				reset();
 			}
 	}
@@ -60,32 +64,28 @@ $(document).ready( function() {
 	$("#redCrystal").on('click', function() {
 		currentValue += redCrystal;
 		$("#currentValue").text(currentValue);
-		clickSound.loop = false;
-        clickSound.play();
+  		sound(clickSound);
 		comparison();
 	});
 
 	$("#greenCrystal").on('click', function() {
 		currentValue += greenCrystal;
 		$("#currentValue").text(currentValue);
-		clickSound.loop = false;
-        clickSound.play();
+  		sound(clickSound);
 		comparison();	
 	});
 
 	$("#blueCrystal").on('click', function() {
 		currentValue += blueCrystal;
 		$("#currentValue").text(currentValue);
-		clickSound.loop = false;
-        clickSound.play();
+  		sound(clickSound);
 		comparison();	
 	});
 
 	$("#diamond").on('click', function() {
 		currentValue += diamond;
 		$("#currentValue").text(currentValue);
-		clickSound.loop = false;
-        clickSound.play();
+  		sound(clickSound);
 		comparison();
 	});
 
