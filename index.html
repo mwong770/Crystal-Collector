@@ -23,8 +23,8 @@
 
 				<h1> Crystal Collector </h1>
 
-				<h2> Can you collect enough crystals to earn a day's wages <br/> 
-					 or will you lose your gold coins?</h2>
+				<h2> Can you find the right crystals <br/> 
+					 to reach your goal value?</h2>
 
 			</div>
 		
@@ -53,23 +53,32 @@
 	<div id="gameContainer" class="container">
 		<div id="gameRow" class="row">
 
-			<div id="gameDivs1" class="col-xs-3 col-sm-3 col-md-3 col-lg-offset-2 col-lg-3">
+			<div id="gameDivs1" class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-2 col-lg-3">
 
-				<div id="goalValueBox"> <div class="label"> Goal Value </div><br/> 
-				 	<span id="goalValue"></span> <br/><br/>
-				 	<div class="label"> Current Value: </div><br/>
-					<span id="currentValue"> 0 </span> 
+				<div id="goalValueBox">
+					<div id="goalLabel">  
+						<div class="label"> Goal Value </div><br/> 
+				 		<span id="goalValue"></span> <br/>
+				 	</div>
+				 	<div id="currentLabel">
+				 		<div class="label"> Current Value: </div><br/>
+						<span id="currentValue"> 0 </span> 
+					</div>
 				</div>
 
 			</div>
 
-			<div id="gameDivs3" class="col-xs-3 col-sm-3 col-md-3 col-lg-offset-2 col-lg-3">
+			<div id="gameDivs3" class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-2 col-lg-3">
 
 				<div id="scoreboard">
-					<div class="label">Wins </div><br/> 
-					<span id="wins"> 0 </span><br/><br>
-					<div class="label">Losses</div><br/>
-					<span id="losses"> 0 </span> 
+					<div id="winsLabel">
+						<div class="label">Wins </div><br/> 
+						<span id="wins"> 0 </span><br/>
+					</div>
+					<div id="lossesLabel">
+						<div class="label">Losses</div><br/>
+						<span id="losses"> 0 </span>
+					</div> 
 				</div>
 
 			</div>
@@ -80,19 +89,19 @@
 	<div id ="bottomContainer" class="container">
 		<div id="bottomRow" class="row">
 	
-			<div id="bottom1" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-2">
+			<div id="bottom1" class="col-xs-3 col-sm-3 col-md-3 ccol-lg-3">
 				<img id="redCrystal" class="crystal" src="assets/images/redCrystal.png">
 			</div>
 
-			<div id="bottom2" class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+			<div id="bottom2" class="col-xs-3 col-sm-3 col-md-3 ccol-lg-3">
 				<img id="blueCrystal" class="crystal" src="assets/images/blueCrystal.png">
 			</div>
 
-			<div id="bottom3" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-1 col-lg-2">
+			<div id="bottom3" class="col-xs-3 col-sm-3 col-md-3 ccol-lg-3">
 				<img id="diamond" class="crystal" src="assets/images/diamond.png">
 			</div>
 
-			<div id="bottom4" class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
+			<div id="bottom4" class="col-xs-3 col-sm-3 col-md-3 ccol-lg-3">
 				<img id="greenCrystal" class="crystal" src="assets/images/greenCrystal.png">
 			</div>
 

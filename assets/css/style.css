@@ -32,7 +32,6 @@ h3 {
 	background: url("../images/redText.png") repeat, white;
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
-	font-size: 110px;
 	text-align: center;
 	font-size: 27px;
 	margin: 20px auto;
@@ -100,14 +99,12 @@ span {
 }
 
 #goalValueBox {
-	height: 200px;
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 35px;
+	margin-top: 30px;
 }
 
 #currentValueBox {
-	height: 200px;
 	font-size: 30px;
 	font-weight: bold;
 	margin-top: 50px;
@@ -116,7 +113,7 @@ span {
 #scoreboard {
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 35px;
+	margin-top: 30px;
 	overflow: auto;
 }
 
@@ -139,12 +136,13 @@ img:hover {
 	box-shadow: none;
 }
 
+/*filter positions the shadow in the center of the crystal 
+  and gives it a blur-radius of 20px*/
 #redCrystal {
    margin-top: 110px;
-   margin-left: 20px;
-   /*positions the shadow in the center of the crystal and 
-   gives it a blur-radius of 20px*/
+   margin-left: 20px;  
    filter: drop-shadow(0px 0px 20px red);
+   margin-left: 100px;
 }
 
 #diamond {
@@ -169,8 +167,63 @@ img:hover {
 		color: blue;
 	}
 
+	h1 {
+		font-size: 95px;
+	}
+
 	h2 {
+		font-size: 31px;
+	}
+
+	h3 {
+		font-size: 27px;
+	}
+
+	.label {
 		font-size: 30px;
+	}
+
+	#winsLabel, #goalLabel {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	#goalValueBox {
+		font-size: 30px;
+		margin-left: 27px;
+		margin-top: 18px;
+	}
+
+	#currentValueBox {
+		font-size: 30px;
+		margin-left: 27px;
+	}
+
+	#scoreboard {
+		font-size: 30px;
+		margin-left: 10px;
+		margin-top: 18px;
+	}
+
+	#redCrystal {
+   		height: 122px;
+   		weight: 122px;
+   		margin-left: 85px;
+	}
+
+	#diamond {
+		height: 102px;
+		weight: 102px;
+	}
+
+	#blueCrystal {
+		height: 107px;
+		weight: 107px;
+	}
+
+	#greenCrystal {
+		height: 102px;
+		weight: 102px;
 	}
 
 	#instructionsSlide {
@@ -187,6 +240,64 @@ img:hover {
 @media screen and (max-width: 1200px) {
 	p {
 		color: purple;
+	}
+
+	h1 {
+		font-size: 90px;
+		margin-top: 10px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 27px;
+	}
+
+	.label {
+		font-size: 28px;
+	}
+
+	#winsLabel, #goalLabel {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	#goalValueBox {
+		font-size: 28px;
+		margin-left: 27px;
+	}
+
+	#currentValueBox {
+		font-size: 28px;
+		margin-left: 27px;
+	}
+
+	#scoreboard {
+		font-size: 28px;
+		margin-left: 10px;
+	}
+
+	#redCrystal {
+   		height: 105px;
+   		weight: 105px;
+   		margin-left: 80px;
+	}
+
+	#diamond {
+		height: 85px;
+		weight: 85px;
+	}
+
+	#blueCrystal {
+		height: 90px;
+		weight: 90px;
+	}
+
+	#greenCrystal {
+		height: 85px;
+		weight: 85px;
 	}
 
 	#instructionsSlide {
@@ -209,6 +320,64 @@ img:hover {
 		color: red;
 	}
 
+	h1 {
+		font-size: 84px;
+		margin-top: 10px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
+
+	.label {
+		font-size: 27px;
+	}
+
+	#winsLabel, #goalLabel {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	#goalValueBox {
+		font-size: 27px;
+		margin-left: 27px;
+	}
+
+	#currentValueBox {
+		font-size: 27px;
+		margin-left: 27px;
+	}
+
+	#scoreboard {
+		font-size: 27px;
+		margin-left: 10px;
+	}
+
+	#redCrystal {
+   		height: 97px;
+   		weight: 97px;
+   		margin-left: 65px;
+	}
+
+	#diamond {
+		height: 77px;
+		weight: 77px;
+	}
+
+	#blueCrystal {
+		height: 82px;
+		weight: 82px;
+	}
+
+	#greenCrystal {
+		height: 77px;
+		weight: 77px;
+	}
+
 	#instructionsSlide {
 		background: url("../images/scroll980.png") no-repeat;
 		background-size: contain;
@@ -226,6 +395,64 @@ img:hover {
 
 	p {
 		color: black;
+	}
+
+	h1 {
+		font-size: 70px;
+		margin-top: 10px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	.label {
+		font-size: 25px;
+	}
+
+	#winsLabel, #goalLabel {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	#goalValueBox {
+		font-size: 25px;
+		margin-left: 25px;
+	}
+
+	#currentValueBox {
+		font-size: 25px;
+		margin-left: 25px;
+	}
+
+	#scoreboard {
+		font-size: 25px;
+		margin-left: 10px;
+	}
+
+	#redCrystal {
+   		height: 95px;
+   		weight: 95px;
+   		margin-left: 50px;
+	}
+
+	#diamond {
+		height: 75px;
+		weight: 75px;
+	}
+
+	#blueCrystal {
+		height: 80px;
+		weight: 80px;
+	}
+
+	#greenCrystal {
+		height: 75px;
+		weight: 75px;
 	}
 
 	#instructionsSlide {
@@ -247,7 +474,63 @@ img:hover {
 		color: red;
 	}
 
+	h1 {
+		font-size: 65px;
+		margin-top: 10px;
+	}
 
+	h2 {
+		font-size: 28px;
+	}
+
+	h3 {
+		font-size: 22px;
+	}
+
+	.label {
+		font-size: 23px;
+	}
+
+	#winsLabel, #goalLabel {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+	#goalValueBox {
+		font-size: 23px;
+		margin-left: 25px;
+	}
+
+	#currentValueBox {
+		font-size: 23px;
+		margin-left: 25px;
+	}
+
+	#scoreboard {
+		font-size: 23px;
+		margin-left: 10px;
+	}
+
+	#redCrystal {
+   		height: 90px;
+   		weight: 90px;
+   		margin-left: 25px;
+	}
+
+	#diamond {
+		height: 70px;
+		weight: 70px;
+	}
+
+	#blueCrystal {
+		height: 75px;
+		weight: 75px;
+	}
+
+	#greenCrystal {
+		height: 70px;
+		weight: 70px;
+	}
 
 	#instructionsSlide {
 		background: url("../images/scroll640.png") no-repeat;
@@ -261,12 +544,69 @@ img:hover {
 
 }
 
-/************ MEDIA 704 MEDIA 520 MEDIA 520 MEDIA 520 MEDIA 520 *******************************/
+/************ MEDIA 520 MEDIA 520 MEDIA 520 MEDIA 520 MEDIA 520 *******************************/
 
 @media screen and (max-width: 520px) {
 
 	p {
 		color: purple;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	h2 {
+		font-size: 22px;
+	}
+
+	h3 {
+		font-size: 21px;
+	}
+
+	.label {
+		font-size: 21px;
+	}
+
+	#winsLabel, #goalLabel {
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+	}
+
+	#goalValueBox {
+		font-size: 21px;
+		margin-left: 25px;
+	}
+
+	#currentValueBox {
+		font-size: 21px;
+		margin-left: 25px;
+	}
+
+	#scoreboard {
+		font-size: 21px;
+		margin-left: 10px;
+	}
+
+	#redCrystal {
+   		height: 70px;
+   		weight: 70px;
+   		margin-left: 20px;
+	}
+
+	#diamond {
+		height: 50px;
+		weight: 50px;
+	}
+
+	#blueCrystal {
+		height: 55px;
+		weight: 55px;
+	}
+
+	#greenCrystal {
+		height: 50px;
+		weight: 50px;
 	}
 
 	#instructionsSlide {
@@ -277,7 +617,8 @@ img:hover {
 		padding-top: 20px;
 		margin-left: 3%;
 		width: 90%;
+		padding-left: 17%;
+		padding-right: 17%
 	}
-
 
 }
