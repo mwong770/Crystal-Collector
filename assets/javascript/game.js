@@ -14,9 +14,9 @@ $(document).ready( function() {
 
 	reset();
 
-	//clears currentValue before each game and displays it on the browser
-	//sets goalValue as a random number from 19 to 120, both inclusive, and displays it on the browser
-	//sets a value for each crystal
+	// clears currentValue before each game and displays it on the browser
+	// sets goalValue as a random number from 19 to 120, both inclusive, and displays it on the browser
+	// sets a value for each crystal
 	function reset() {
 		currentValue = 0;
 		$("#currentValue").text(currentValue);
@@ -28,20 +28,20 @@ $(document).ready( function() {
 		diamond = randomCrystalValue();
 	}
 
-	//creates an inclusive random number between 1 and 12 to be used for crystal values
+	// creates an inclusive random number between 1 and 12 to be used for crystal values
 	function randomCrystalValue() {
 		return Math.floor((Math.random() * 12) + 1);
 	}
 
-	//plays sound to be used when crystal clicked or score implemented
+	// plays sound to be used when crystal clicked or score implemented
 	function sound(soundFile) {
 		soundFile.loop = false;
         soundFile.play();
 	}
 
-	//compares currentValue to goalValue to determine wins/losses
-	//increments and displays score and inserts sound per win/loss
-	//resets game after each win/loss
+	// compares currentValue to goalValue to determine wins/losses
+	// increments and displays score and inserts sound per win/loss
+	// resets game after each win/loss
 	function comparison() {	
 		if (currentValue == goalValue) {
 			wins++;
@@ -58,15 +58,23 @@ $(document).ready( function() {
 			}
 	}
 
-	//increments currentValue based on crystal clicked and displays sum on browser
-	//adds sound per click on crystal
-	//calls comparison function
+	// increments currentValue based on crystal clicked and displays sum on browser
+	// adds sound per click on crystal
+	// calls comparison function
 	$("#redCrystal").on('click', function() {
 		currentValue += redCrystal;
 		$("#currentValue").text(currentValue);
   		sound(clickSound);
 		comparison();
 	});
+
+	// $(".crystal").on('click', function() {
+	// 	$()
+	// 	currentValue += redCrystal;
+	// 	$("#currentValue").text(currentValue);
+ //  		sound(clickSound);
+	// 	comparison();
+	// });
 
 	$("#greenCrystal").on('click', function() {
 		currentValue += greenCrystal;
@@ -89,7 +97,7 @@ $(document).ready( function() {
 		comparison();
 	});
 
-	//toggles instructions
+	// toggles instructions
   	$("#instructionsClicker").click(function() {
   			$("#instructionsSlide").slideToggle("slow");
   	});
