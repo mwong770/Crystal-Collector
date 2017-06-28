@@ -42,7 +42,7 @@ $(document).ready( function() {
 	// resets game after each win/loss
 	function comparison() {	
 		var scoreSound = document.getElementById("scoreSound");
-		if (currentValue == goalValue) {
+		if (currentValue === goalValue) {
 			wins++;
 			$("#wins").text(wins);
 			sound(scoreSound);
