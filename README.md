@@ -40,7 +40,7 @@ An interactive game that dynamically updates the HTML page as users try to match
 * When users click a crystal, it's numeric value is revealed as it is added to users' current value, initially set to 0, and the sum is displayed under 'Current Value'
 * Users see their wins and losses updated with each game round
 * Users hear one sound when crystals are clicked and a different sound when wins or losses are updated
-* Users see a new random number and crystals are given a new random value after each round 
+* Users see a new random 'Goal Value' and crystals are given a new random value after each round 
 
 
 ## <a name="developer"></a> :bust_in_silhouette: Developer
