@@ -45,15 +45,14 @@ $(document).ready( function() {
 		if (currentValue == goalValue) {
 			wins++;
 			$("#wins").text(wins);
-        	sound(scoreSound);
-			reset();
 		}
 			else if (currentValue > goalValue) {
 				losses++;
 				$("#losses").text(losses);
-				sound(scoreSound);
-				reset();
+				
 			}
+		sound(scoreSound);
+		reset();
 	}
 
 	// increments currentValue based on crystal clicked and displays sum on browser
