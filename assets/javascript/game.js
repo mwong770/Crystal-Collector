@@ -3,14 +3,8 @@ $(document).ready( function() {
 
 	var goalValue = 0;
 	var currentValue = 0;
-	var diamond = '';
-	var redCrystal = '';
-	var blueCrystal = '';
-	var greenCrystal = '';
 	var wins = 0;
 	var losses = 0;
-	var scoreSound = document.getElementById("scoreSound");
-	var clickSound = document.getElementById("clickSound");
 
 	reset();
 
@@ -22,10 +16,14 @@ $(document).ready( function() {
 		$("#currentValue").text(currentValue);
 		goalValue = Math.floor(Math.random() * ((120 - 19) +1) + 19);
 		$("#goalValue").text(goalValue);
-		redCrystal = randomCrystalValue();
-		greenCrystal = randomCrystalValue();
-		blueCrystal = randomCrystalValue();
-		diamond = randomCrystalValue();
+		var redCrystal = randomCrystalValue();
+		$("#redCrystal").attr("value", redCrystal);
+		var greenCrystal = randomCrystalValue();
+		$("#greenCrystal").attr("value", greenCrystal);
+		var blueCrystal = randomCrystalValue();
+		$("#blueCrystal").attr("value", blueCrystal);
+		var diamond = randomCrystalValue();
+		$("#diamond").attr("value", diamond);
 	}
 
 	// creates an inclusive random number between 1 and 12 to be used for crystal values
@@ -43,13 +41,13 @@ $(document).ready( function() {
 	// increments and displays score and inserts sound per win/loss
 	// resets game after each win/loss
 	function comparison() {	
+		var scoreSound = document.getElementById("scoreSound");
 		if (currentValue == goalValue) {
 			wins++;
 			$("#wins").text(wins);
         	sound(scoreSound);
 			reset();
 		}
-
 			else if (currentValue > goalValue) {
 				losses++;
 				$("#losses").text(losses);
@@ -61,37 +59,10 @@ $(document).ready( function() {
 	// increments currentValue based on crystal clicked and displays sum on browser
 	// adds sound per click on crystal
 	// calls comparison function
-	$("#redCrystal").on('click', function() {
-		currentValue += redCrystal;
-		$("#currentValue").text(currentValue);
-  		sound(clickSound);
-		comparison();
-	});
-
-	// $(".crystal").on('click', function() {
-	// 	$()
-	// 	currentValue += redCrystal;
-	// 	$("#currentValue").text(currentValue);
- //  		sound(clickSound);
-	// 	comparison();
-	// });
-
-	$("#greenCrystal").on('click', function() {
-		currentValue += greenCrystal;
-		$("#currentValue").text(currentValue);
-  		sound(clickSound);
-		comparison();	
-	});
-
-	$("#blueCrystal").on('click', function() {
-		currentValue += blueCrystal;
-		$("#currentValue").text(currentValue);
-  		sound(clickSound);
-		comparison();	
-	});
-
-	$("#diamond").on('click', function() {
-		currentValue += diamond;
+	$(".crystal").on('click', function() {
+		var clickSound = document.getElementById("clickSound");
+		var crystalValue = parseInt($(this).attr("value"));
+		currentValue += crystalValue;
 		$("#currentValue").text(currentValue);
   		sound(clickSound);
 		comparison();
@@ -99,7 +70,7 @@ $(document).ready( function() {
 
 	// toggles instructions
   	$("#instructionsClicker").click(function() {
-  			$("#instructionsSlide").slideToggle("slow");
+  		$("#instructionsSlide").slideToggle("slow");
   	});
  
 });
