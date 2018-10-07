@@ -1,4 +1,4 @@
-# week-4-game (Crystal Collector)
+# Crystal Collector
 
 An interactive game that dynamically updates the HTML page as users try to match a random number by clicking four cystals that give a number value unknown to users until the crystals are clicked
 
